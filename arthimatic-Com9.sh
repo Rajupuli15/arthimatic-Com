@@ -23,7 +23,7 @@ for (( i=o; i<4; i++ ))
 do
 		for (( j=0; j<4-i-1; j++ ))
 		do
-		if [[ ${a[j]} -lt ${a[$((j+1))]} ]]
+		if [[ ${[j]} -gt ${a[$((j+1))]} ]]
 		then
 		temp=${a[j]}
 		a[j]=${a[$((j+1))]}
@@ -32,4 +32,4 @@ do
 		done
 done
 
-echo "Descending Order" ${a[@]}
+echo "Ascending Order" ${a[@]}
